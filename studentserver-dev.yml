@@ -1,0 +1,19 @@
+server:
+  port: ${port:8080}
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+  application:
+    name: studentserver
+mybatis:
+  type-aliases-package: com.bean
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    ip-address: 127.0.0.1 #ip地址
+    prefer-ip-address: true
